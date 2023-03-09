@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Monitor",
+    "version": "1.0",
+    "description": "Monitor Various Actions",
+    "content_scripts": [
+      {
+        "js": ["content.js"],
+        "matches": [
+          "https://*/*"
+        ]
+      }
+    ],
+    "permissions": [
+      "tabs",
+      "storage"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
